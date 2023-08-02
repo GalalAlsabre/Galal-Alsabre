@@ -22,6 +22,7 @@ $td5 = '';
 
 
 $(document).ready(function() {
+
     $('.type').on('change', function() {
         $ProName = $(this).val();
         $rr = '.Ga' + $ProName;
@@ -100,11 +101,11 @@ $(document).ready(function() {
         }
 
         // ShowProductsTabelEnd();
-        aaaaa();
+
 
     });
 
-
+    aaaaa();
 });
 
 function eeeeeee() {
@@ -161,10 +162,10 @@ function aaaaa() {
     // price qty
 
 }
-$count = 0;
+
 
 function AddQtyAnyThink($this, $PricProduct) {
-
+$count = 1;
     $button = $this.next().children().eq(0).next().children('button');
     $a1 = $button.closest("div").prev("table").children().children().eq(1);
 
@@ -191,6 +192,7 @@ function AddQtyAnyThink($this, $PricProduct) {
                 $totalprice = ($p * $(this).val());
                 $price = $p;
                 $qtyqty = $(this).val();
+                $count =$(this).val();
 
             });
             if ($price == 0 || $qtyqty == 0) {
@@ -199,15 +201,22 @@ function AddQtyAnyThink($this, $PricProduct) {
                 $price = $PricProduct;
                 $qtyqty = 1;
                 $totalprice = $price * $qtyqty;
-            }
+            } else{
+
+                $price = $PricProduct;
+                $qtyqty = $count ;
+                $totalprice = $price * $qtyqty;
+
+}
 
 
 
         }
 
+
     });
 
-    console.log($price + "sss" + $qtyqty + "yy" + $totalprice);
+    aaaaa();
 }
 
 
@@ -227,8 +236,7 @@ function AddShalmansArry($id) {
     // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-
-    $td1 = ' <td> شلمان ' + $input1 + 'هـ ' + ' × ' + $input2 + ' تركي ' + '</td>';
+   $td1 = ' <td> شلمان ' + $input1 + 'هـ ' + ' × ' + $input2 + ' تركي ' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
     $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
@@ -236,12 +244,10 @@ function AddShalmansArry($id) {
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
 
+
     AddQtyAnyThink($id, $PricProduct);
 
-    // $button = $id.next().children().eq(0).next().children('button');
-
-
-
+ 
 
 }
 
@@ -265,12 +271,6 @@ function AddMobastArry($id) {
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
 
-    // $eee = ' <td> مبسط ' + $input1 + 'هـ ' + ' × ' + $input2 + ' تركي ' +
-    //     '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' +
-    //     $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-    //     ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-    //     '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
 
     $td1 = ' <td> مبسط ' + $input1 + 'هـ ' + ' × ' + $input2 + ' تركي ' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
@@ -279,6 +279,7 @@ function AddMobastArry($id) {
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
+
     AddQtyAnyThink($id, $td1, $td2, $td3, $td4, $td5, $PricProduct)
 
 }
@@ -293,18 +294,16 @@ function AddAmlasArry($id) {
     // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-    // $eee = ' <td>  أملس أبو ' + $input1 + ' ×  6 متر' + '</td>  <td> ' + $PricProduct + '</td> <td>' + 33 + '</td> <td> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-    $eee = ' <td> أملس أبو ' + $input1 + ' ×  6 متر ' +
-        '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' +
-        $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-        ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-        '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-
+    $td1 = ' <td> أملس أبو ' + $input1 + ' ×  6 متر ' + '</td>';
+    $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
+    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
+    $td5 = '<td> ' + $NamberToon + '</td>';
+    $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
 
-    $Products.push($eee);
+    AddQtyAnyThink($id, $PricProduct);
+
 
 
 }
@@ -325,18 +324,16 @@ function AddZangArry($id) {
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
     $a = '1 × 6 × 0.';
-    // $eee = ' <td> زنج هناجر' + $a + $input1 + '</td>  <td> ' + $PricProduct + '</td> <td>' + 33 + '</td> <td> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
 
-    $eee = ' <td> زنج هناجر ' + $a + $input1 +
-        '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' +
-        $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-        ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-        '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-
+    $td1 = ' <td> زنج هناجر ' + $a + $input1 + '</td>';
+    $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
+    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
+    $td5 = '<td> ' + $NamberToon + '</td>';
+    $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
 
-    $Products.push($eee);
+    AddQtyAnyThink($id, $PricProduct);
 
 
 }
@@ -354,17 +351,15 @@ function AddMorabaaArry($id) {
     // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-    // $eee = ' <td>  مربع صم ' + $input1 + ' ×  6 متر' + '</td>  <td> ' + $PricProduct + '</td> <td>' + 33 + '</td> <td> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-    $eee = ' <td> مربع صم ' + $input1 + ' ×  6 متر' +
-        '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' +
-        $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-        ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-        '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
+    $td1 = ' <td> مربع صم ' + $input1 + ' ×  6 متر' + '</td>';
+    $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
+    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
+    $td5 = '<td> ' + $NamberToon + '</td>';
+    $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
 
-    $Products.push($eee);
+    AddQtyAnyThink($id, $PricProduct);
 
 
 }
@@ -415,19 +410,15 @@ function AddMawaseerArry($id) {
     // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-    // $eee = ' <td> ' + $arabik_color + ' × ' + $input2_thick + ' ×  قطر' + $input3_diameter + ' ×  6 متر' + '</td>  <td> ' + $PricProduct + '</td> <td>' + 33 + '</td> <td> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-    $eee = ' <td>' + $arabik_color + ' × ' + $input2_thick + ' ×  قطر' + $input3_diameter + ' ×  6 متر' +
-        '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' +
-        $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-        ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-        '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-
-
+    $td1 = ' <td>' + $arabik_color + ' × ' + $input2_thick + ' ×  قطر' + $input3_diameter + ' ×  6 متر' + '</td>';
+    $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
+    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
+    $td5 = '<td> ' + $NamberToon + '</td>';
+    $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
 
-    $Products.push($eee);
+    AddQtyAnyThink($id, $PricProduct);
 
 }
 
@@ -462,15 +453,6 @@ function AddHaweeArry($id) {
     // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-    // $eee = ' <td> ' + $arabik_color + '  ' + $input2_ver + ' × ' + $input3_hor + ' × ' + $th + '</td>  <td> ' + $PricProduct + '</td> <td>' + 33 + '</td> <td> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-
-    // $eee = ' <td>' + $arabik_color + '  ' + $input2_ver + ' × ' + $input3_hor + ' ×  ' + $th +
-    //     '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' +
-    //     $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-    //     ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-    //     '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
 
     $td1 = ' <td>' + $arabik_color + '  ' + $input2_ver + ' × ' + $input3_hor + ' ×  ' + $th + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
@@ -481,12 +463,6 @@ function AddHaweeArry($id) {
     $table_show.html($eee);
 
     AddQtyAnyThink($id, $PricProduct);
-
-
-
-    // $table_show.html($eee);
-
-    // $Products.push($eee);
 
 
 }
@@ -510,18 +486,15 @@ function AddBetarArry($id) {
     // // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-    // $eee = ' <td> ' + $name_arabik + '  ' + $ver + ' × ' + $hor + ' × ' + $input3_thick + ' تركي ' + '</td>  <td> ' + $PricProduct + '</td> <td>' + 1 + '</td> <td> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-    $eee = ' <td>' + $name_arabik + '  ' + $ver + ' × ' + $hor + ' ×  ' + $input3_thick + ' تركي ' +
-        '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control  qty_shalman price" placeholder="' +
-        $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-        ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-        '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-
+    $td1 = '<td>' + $name_arabik + '  ' + $ver + ' × ' + $hor + ' ×  ' + $input3_thick + ' تركي ' + '</td>';
+    $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
+    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
+    $td5 = '<td> ' + $NamberToon + '</td>';
+    $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
 
-    $Products.push($eee);
+    AddQtyAnyThink($id, $PricProduct);
 
 }
 
@@ -545,18 +518,16 @@ function AddHashabArry($id) {
     // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-    // $eee = ' <td> خشب ' + $input1_ver + ' × ' + $input2_hor + ' × ' + $input3_tool + ' KTS ' + '</td>  <td> ' + $PricProduct + '</td> <td>' + 1 + '</td> <td> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
 
-    $eee = ' <td>' + 'خشب ' + $input1_ver + ' × ' + $input2_hor + ' × ' + $input3_tool + ' KTS ' +
-        '</td> <td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' +
-        $PricProduct + '" value="' + $PricProduct + '" />' + '</td> <td style="width: 11%;">' +
-        ' <input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' +
-        '</td> <td class="price_text"> ' + $PricProduct + ' </td> <td> ' + $NamberToon + '</td> ';
-
-
+    $td1 = '<td>' + 'خشب ' + $input1_ver + ' × ' + $input2_hor + ' × ' + $input3_tool + ' KTS ' + '</td>';
+    $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
+    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
+    $td5 = '<td> ' + $NamberToon + '</td>';
+    $eee = $td1 + $td2 + $td3 + $td4 + $td5;
     $table_show.html($eee);
 
-    $Products.push($eee);
+    AddQtyAnyThink($id, $PricProduct);
 
 }
 
@@ -753,9 +724,6 @@ $b = $('.table-responsive').children("div").children("button").addClass("sssssss
 $b.on('click', function() {
     console.log($totalprice + "www" + $price + "yyyy" + $qtyqty + 'azzaz' + $count++);
 
-
-
-
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $price + '" value="' + $price + '" />' + '</td>';
     $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="' + $qtyqty + '" placeholder="' + $qtyqty + '" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $totalprice + ' </td>';
@@ -763,6 +731,13 @@ $b.on('click', function() {
 
     $Products.push($eee);
 
+
     ShowProductsTabelEnd();
+    aaaaa();
 
 });
+
+
+
+
+
