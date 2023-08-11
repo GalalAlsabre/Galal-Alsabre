@@ -563,7 +563,7 @@ function AddNumberToonOfShalmas($input1, $input2) {
     if ($input1 == 1 && $input2 == 1.9) { $NamberToon = 249; } else if ($input1 == 1.25 && $input2 == 1.9) { $NamberToon = 235; } else if ($input1 == 0.75 && $input2 == 1.9) {
         $NamberToon = 322;
     } else if ($input1 == 1.5 && $input2 == 1.9) { $NamberToon = 174; } else if ($input1 == 1.5 && $input2 == 3.2) {
-        $NamberToon = 174;
+        $NamberToon = 110;
     } else if ($input1 == 2 && $input2 == 2.2) { $NamberToon = 110; } else if ($input1 == 2 && $input2 == 3.2) {
         $NamberToon = 84;
     } else if ($input1 == 2 && $input2 == 3.6) { $NamberToon = 73; } else if ($input1 == 2 && $input2 == 4.2) {
