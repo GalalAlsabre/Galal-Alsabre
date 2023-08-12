@@ -238,7 +238,7 @@ function AddShalmansArry($id) {
 
    $td1 = ' <td> شلمان ' + $input1 + 'هـ ' + ' × ' + $input2 + ' تركي ' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -274,7 +274,7 @@ function AddMobastArry($id) {
 
     $td1 = ' <td> مبسط ' + $input1 + 'هـ ' + ' × ' + $input2 + ' تركي ' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -296,7 +296,7 @@ function AddAmlasArry($id) {
 
     $td1 = ' <td> أملس أبو ' + $input1 + ' ×  6 متر ' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -327,7 +327,7 @@ function AddZangArry($id) {
 
     $td1 = ' <td> زنج هناجر ' + $a + $input1 + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -353,7 +353,7 @@ function AddMorabaaArry($id) {
 
     $td1 = ' <td> مربع صم ' + $input1 + ' ×  6 متر' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -410,9 +410,9 @@ function AddMawaseerArry($id) {
     // العنصر اللذي بنعرض مخرجاتنا فيه
     $table_show = $id.next(".table-responsive").children('table').children().children().eq(1);
 
-    $td1 = ' <td>' + $arabik_color + ' × ' + $input2_thick + ' ×  قطر' + $input3_diameter + ' ×  6 متر' + '</td>';
+    $td1 = ' <td>' + $arabik_color + ' × ' + $input2_thick + ' ×  قطر' + $input3_diameter + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -456,7 +456,7 @@ function AddHaweeArry($id) {
 
     $td1 = ' <td>' + $arabik_color + '  ' + $input2_ver + ' × ' + $input3_hor + ' ×  ' + $th + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -488,7 +488,7 @@ function AddBetarArry($id) {
 
     $td1 = '<td>' + $name_arabik + '  ' + $ver + ' × ' + $hor + ' ×  ' + $input3_thick + ' تركي ' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
@@ -521,7 +521,7 @@ function AddHashabArry($id) {
 
     $td1 = '<td>' + 'خشب ' + $input1_ver + ' × ' + $input2_hor + ' × ' + $input3_tool + ' KTS ' + '</td>';
     $td2 = '<td  style="width: 22%;"> ' + ' <input type="number" class="form-control qty_shalman price" placeholder="' + $PricProduct + '" value="' + $PricProduct + '" />' + '</td>';
-    $td3 = '<td style="width: 11%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
+    $td3 = '<td style="width: 13%;">' + '<input type="number" class="form-control qty_shalman qty" value="1" placeholder="1" autocomplete="off" />' + '</td>';
     $td4 = '<td class="price_text"> ' + $PricProduct + ' </td>';
     $td5 = '<td> ' + $NamberToon + '</td>';
     $eee = $td1 + $td2 + $td3 + $td4 + $td5;
